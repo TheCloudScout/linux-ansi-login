@@ -16,3 +16,5 @@ Install packages
 Use logo as part of Message of the Day
 
     printf "\n$(cat /home/logstash/wortell-ansi-figlet-2 | /usr/games/lolcat -f -p 6 -S 47)\n"
+
+Place extra MOTD files in /etc/update-motd.d
