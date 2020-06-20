@@ -14,12 +14,12 @@ Show all installed fonts
     
 Wortell Enterprise Security logo
  
-    /usr/bin/figlet "Wortell" -f larry3d -w 140 | /usr/games/lolcat -f -p 6 -S 47
-    /usr/bin/figlet "           Enterprise Security" -f miniwi -w 140 | /usr/games/lolcat -f -p 6 -S 47
+    /usr/bin/figlet "Wortell" -f larry3d -w 140 | /usr/games/lolcat -f -p 6 -S 47 >> wortell-figlet.txt
+    /usr/bin/figlet "           Enterprise Security" -f small -w 140 | /usr/games/lolcat -f -p 6 -S 47 >> wortell-figlet.txt
     
 Use logo as part of Message of the Day
 
-    printf "\n$(cat /home/logstash/wortell-ansi-figlet-2 | /usr/games/lolcat -f -p 6 -S 47)\n"
+    printf "\n$(cat /home/logstash/wortell-figlet.txt | /usr/games/lolcat -f -p 6 -S 47)\n"
 
 Place extra MOTD files in /etc/update-motd.d
 
