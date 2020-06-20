@@ -1,0 +1,3 @@
+#!/bin/bash
+cat /home/logstash/wortell-ansi-figlet-3 | /usr/games/lolcat -f -p 6 -S 47
+printf "\n"

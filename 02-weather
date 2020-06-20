@@ -1,0 +1,3 @@
+#!/bin/bash
+printf "\n"
+curl wttr.in/Gouda?0 --silent --max-time 3
