@@ -1,3 +1,3 @@
 #!/bin/bash
 printf "\n"
-/usr/bin/neofetch --ascii_distro windows --color_blocks off
+/usr/bin/neofetch --color_blocks off
