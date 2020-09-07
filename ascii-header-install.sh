@@ -1,7 +1,7 @@
 # Let's start by installing all the latest updates
 sudo apt-get update && sudo apt-get -y upgrade
 # Install Figlet, Lolcat, Neofetch and JQ to create a nice ascii MOTD header
-sudo apt-get install -y figlet lolcat neofetch
+sudo apt-get install -y figlet lolcat neofetch jq
 # Download additional Figlet fonts
 git clone https://github.com/xero/figlet-fonts
 sudo mv figlet-fonts/* /usr/share/figlet/ && rm -rf figlet-fonts
