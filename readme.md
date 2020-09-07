@@ -1,32 +1,54 @@
-Update repos
+Please use ascii-header-install.sh for a fully automated installation.
+---
+## What this script does:
+
+### Update repos
 
     sudo apt-get update && sudo apt-get -y upgrade
 
-Install additional packages
+### Install additional packages like Figlet, Lolcat and Neofetch
     
     sudo apt-get install -y figlet lolcat neofetch
+
+_Figlet is an application which can gegerate ascii-art-like logo's from text_
+
+_Lolcat will add rainbow colors to your output_
+
+_Neofetch generates a nice ascii sysinfo_
+
+
+### Download additional Figlet fonts
+    
     git clone https://github.com/xero/figlet-fonts
     mv figlet-fonts/* /usr/share/figlet/ && rm -rf figlet-fonts
+
+### Generate Wortell Enterprise Security ascii logo with Figlet and add some color with Lolcat
     
-Show all installed fonts
-    
-    showfigfonts
-    
-Wortell Enterprise Security logo
- 
     /usr/bin/figlet "Wortell" -f larry3d -w 140 | /usr/games/lolcat -f -p 6 -S 47 >> wortell-figlet.txt
     /usr/bin/figlet "           Enterprise Security" -f small -w 140 | /usr/games/lolcat -f -p 6 -S 47 >> wortell-figlet.txt
+
+_Notice how two different fonts are used. The logo is stored in ~/wortell-figlet.txt_
+
+### We won't be needing these MOTD modules anymopre
     
-Use logo as part of Message of the Day
+    sudo rm /etc/update-motd.d/00-header
+    sudo rm /etc/update-motd.d/10-help-text
+    sudo rm /etc/update-motd.d/50-landscape-sysinfo
 
-    printf "\n$(cat /home/logstash/wortell-figlet.txt | /usr/games/lolcat -f -p 6 -S 47)\n"
+### Download our own custom MOTD modules which make use of the ascii headers
 
-Place extra MOTD files in /etc/update-motd.d
+    sudo wget https://raw.githubusercontent.com/TheCloudScout/linux-asnsi-login/master/00-header --directory-prefix=/etc/update-motd.d/
+    sudo wget https://raw.githubusercontent.com/TheCloudScout/linux-asnsi-login/master/01-neofetch --directory-prefix=/etc/update-motd.d/
+    sudo wget  https://raw.githubusercontent.com/TheCloudScout/linux-asnsi-login/master/02-weather --directory-prefix=/etc/update-motd.d/
 
-    00-header
-    01-neofetch
-    02-weather
+### And make sure these new modules can be executed
 
-Add execute permissions
+    sudo chmod +x /etc/update-motd.d/00-header
+    sudo chmod +x /etc/update-motd.d/01-neofetch
+    sudo chmod +x /etc/update-motd.d/02-weather
 
-    sudo chmod +x /etc/update-motd.d/*
+## Aditional help
+
+### Show all installed Figlet fonts
+    
+    showfigfonts
