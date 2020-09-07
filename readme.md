@@ -50,6 +50,7 @@ _Notice how two different fonts are used. The logo is stored in ~/wortell-figlet
     sudo chmod +x /etc/update-motd.d/01-neofetch
     sudo chmod +x /etc/update-motd.d/02-weather
 
+---
 ## Aditional help
 
 ### Show all installed Figlet fonts
