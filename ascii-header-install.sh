@@ -6,8 +6,8 @@ sudo apt-get install -y figlet lolcat neofetch jq
 git clone https://github.com/xero/figlet-fonts
 sudo mv figlet-fonts/* /usr/share/figlet/ && rm -rf figlet-fonts
 # Generate an ascii logo with Figlet and add some color with Lolcat
-figlet "Wortell" -f larry3d -w 140 | /usr/games/lolcat -f -p 6 -S 47 >> wortell-figlet.txt
-figlet "           Enterprise Security" -f small -w 140 | /usr/games/lolcat -f -p 6 -S 47 >> wortell-figlet.txt
+/usr/bin/figlet "Wortell" -f larry3d -w 140 | /usr/games/lolcat -f -p 6 -S 47 >> wortell-figlet.txt
+/usr/bin/figlet "           Enterprise Security" -f small -w 140 | /usr/games/lolcat -f -p 6 -S 47 >> wortell-figlet.txt
 # We won't be needing these MOTD modules anymore
 sudo rm /etc/update-motd.d/00-header
 sudo rm /etc/update-motd.d/10-help-text
