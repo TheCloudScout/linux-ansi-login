@@ -1,4 +1,7 @@
-Please use ascii-header-install.sh for a fully automated installation.
+## Installation
+
+Please use *ascii-header-install.sh* for a fully automated installation.
+
 ---
 ## What this script does:
 
