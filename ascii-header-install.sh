@@ -1,7 +1,7 @@
 # Let's start by installing all the latest updates
 sudo apt-get update && sudo apt-get -y upgrade
 
-# Install Figlet, Lolcat and Neofetsch to create a nice ascii MOTD header
+# Install Figlet, Lolcat and Neofetch to create a nice ascii MOTD header
 sudo apt-get install -y figlet lolcat neofetch
 
 # Download additional Figlet fonts
