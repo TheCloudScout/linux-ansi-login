@@ -74,10 +74,11 @@ _The string contains leading and trailing double quotes, we need to remove these
     CITY="${CITY#\"}"
 
 _And create 02-weather file_
+_Note that the "m" make sure we get our results in metric. Check https://wttr.in/:help for more info_
 
     echo '#!/bin/bash' >> 02-weather
     echo 'printf "\n"' >> 02-weather
-    echo 'curl wttr.in/'"$CITY"'?0 --silent --max-time 3' >> 02-weather
+    echo 'curl wttr.in/'"$CITY"'?m0 --silent --max-time 3' >> 02-weather
 
 ### Move the MOTD modules to their correct location
 
