@@ -37,6 +37,8 @@ _Notice how two different fonts are used. The logo is stored in ~/wortell-figlet
     sudo rm /etc/update-motd.d/00-header
     sudo rm /etc/update-motd.d/10-help-text
     sudo rm /etc/update-motd.d/50-landscape-sysinfo
+    sudo rm /etc/update-motd.d/50-motd-news
+    sudo rm /etc/update-motd.d/80-livepatch
 
 ### Download our own custom MOTD modules which make use of the ascii headers
 
@@ -49,6 +51,7 @@ _Notice how two different fonts are used. The logo is stored in ~/wortell-figlet
     sudo chmod +x /etc/update-motd.d/00-header
     sudo chmod +x /etc/update-motd.d/01-neofetch
     sudo chmod +x /etc/update-motd.d/02-weather
+    sudo chown root:root /etc/update-motd.d/*
 
 ---
 ## Aditional help
