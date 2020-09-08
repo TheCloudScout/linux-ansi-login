@@ -12,6 +12,8 @@ sudo mv figlet-fonts/* /usr/share/figlet/ && rm -rf figlet-fonts
 sudo rm /etc/update-motd.d/00-header
 sudo rm /etc/update-motd.d/10-help-text
 sudo rm /etc/update-motd.d/50-landscape-sysinfo
+sudo rm /etc/update-motd.d/50-motd-news
+sudo rm /etc/update-motd.d/80-livepatch
 # Create new 00-header file with the ascii logo
 HOME=~
 echo '#!/bin/bash' >> 00-header
@@ -37,3 +39,4 @@ sudo mv -t /etc/update-motd.d/ 00-header 01-neofetch 02-weather
 sudo chmod +x /etc/update-motd.d/00-header
 sudo chmod +x /etc/update-motd.d/01-neofetch
 sudo chmod +x /etc/update-motd.d/02-weather
+sudo chown root:root /etc/update-motd.d/*
