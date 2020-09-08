@@ -64,6 +64,7 @@ _Nothing special just disabling Neofetch color blocks because it looks better IM
 #### Create 02-weather for real-time weather report
 
 _We want a weather report based on the location of the server. So let's first find the local city_
+
 _First we found our public IP then we find the local city based of that IP_
     
     CITYquoted=$(curl -s https://ipvigilante.com/$(curl -s https://ipinfo.io/ip) | jq '.data.city_name')
@@ -74,6 +75,7 @@ _The string contains leading and trailing double quotes, we need to remove these
     CITY="${CITY#\"}"
 
 _And create 02-weather file_
+
 _Note that the "m" make sure we get our results in metric. Check https://wttr.in/:help for more info_
 
     echo '#!/bin/bash' >> 02-weather
