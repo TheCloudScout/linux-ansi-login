@@ -21,7 +21,6 @@ echo 'cat '"$HOME"'/wortell-figlet.txt | /usr/games/lolcat -f -p 6 -S 47' >> 00-
 echo 'printf "\n"' >> 00-header
 # Create 01-neofetch for sysinfo 
 echo '#!/bin/bash' >> 01-neofetch
-echo 'printf "\n"' >> 01-neofetch
 echo '/usr/bin/neofetch --color_blocks off' >> 01-neofetch
 # Create 02-weather for real-time weather report
 # First get local city based on IP
