@@ -13,11 +13,9 @@ Please use *ascii-header-install.sh* for a fully automated installation.
     
     sudo apt-get install -y figlet lolcat neofetch
 
-_Figlet is an application which can gegerate ascii-art-like logo's from text_
-
-_Lolcat will add rainbow colors to your output_
-
-_Neofetch generates a nice ascii sysinfo_
+> Figlet is an application which can gegerate ascii-art-like logo's from text_
+> Lolcat will add rainbow colors to your output
+> Neofetch generates a nice ascii sysinfo
 
 
 ### Download additional Figlet fonts
