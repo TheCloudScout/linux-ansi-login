@@ -1,4 +1,4 @@
-# Installation
+## Installation
 
 Please use *ascii-header-install.sh* for a fully automated installation.
 
