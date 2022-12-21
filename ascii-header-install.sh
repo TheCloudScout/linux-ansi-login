@@ -43,4 +43,3 @@ sudo chmod +x /etc/update-motd.d/00-header
 sudo chmod +x /etc/update-motd.d/01-neofetch
 sudo chmod +x /etc/update-motd.d/02-weather
 sudo chown root:root /etc/update-motd.d/*
-
